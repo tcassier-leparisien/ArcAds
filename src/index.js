@@ -29,6 +29,8 @@ export class ArcAds {
   * @param {object} params - An object containing all of the advertisement configuration settings such as slot name, id, and position.
   **/
   registerAd(params) {
+    console.log('ETAPE 2 : REGISTER AD SUCCESSFULLY INVOKED')
+    console.log(`PARAMS : ||| ${params} |||`)
     const { id, slotName, dimensions, adType = false, targeting = {}, display = 'all', bidding = false, iframeBidders = ['openx'] } = params;
     const flatDimensions = [];
     let processDisplayAd = false;
