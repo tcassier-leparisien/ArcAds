@@ -7,6 +7,7 @@ import { prepareSizeMaps, setResizeListener } from './services/sizemapping';
 /** @desc Displays an advertisement from Google DFP with optional support for Prebid.js and Amazon TAM/A9. **/
 export class ArcAds {
   constructor(options, handleSlotRendered = null) {
+    console.log('CONSTRUCTOR LAUNCHED')
     this.dfpId = options.dfp.id || '';
     this.wrapper = options.bidding || {};
     this.positions = [];
@@ -116,6 +117,7 @@ export class ArcAds {
     bidding = false,
     prerender = null
   }) {
+    console.log('DISPLAY AD')
     const fullSlotName = determineSlotName(this.dfpId, slotName);
     const parsedDimensions = dimensions && !dimensions.length ? null : dimensions;
     const ad = !dimensions ? window.googletag.defineOutOfPageSlot(fullSlotName, id)
