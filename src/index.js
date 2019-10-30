@@ -31,7 +31,7 @@ export class ArcAds {
   **/
   registerAd(params) {
     console.log('ETAPE 2 : REGISTER AD SUCCESSFULLY INVOKED');
-    console.log(`PARAMS : ||| ${params} |||`);
+    console.log(params);
     const { id, slotName, dimensions, adType = false, targeting = {}, display = 'all', bidding = false, iframeBidders = ['openx'] } = params;
     const flatDimensions = [];
     let processDisplayAd = false;
@@ -155,7 +155,9 @@ export class ArcAds {
 
     const safebreakpoints = (sizemap && sizemap.breakpoints) ? sizemap.breakpoints : [];
 
+    console.log('BEFORE FETCHBIDS');
     if (dimensions && bidding && ((bidding.amazon && bidding.amazon.enabled) || (bidding.prebid && bidding.prebid.enabled))) {
+      console.log('AFTER FETCHBIDS');
       fetchBids({
         ad,
         id,
