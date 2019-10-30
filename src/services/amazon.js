@@ -6,6 +6,7 @@
 * @param {function} cb - An optional callback function that should fire whenever the bidding has concluded.
 **/
 export function fetchAmazonBids(id, slotName, dimensions, breakpoints, cb = null) {
+  console.log('SALUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUT')
   // pass in breakpoints array
   let sizeArray = dimensions;
 
