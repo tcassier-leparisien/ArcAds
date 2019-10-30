@@ -78,6 +78,7 @@ export function fetchBids({
   prerender,
   breakpoints
 }) {
+  console.log('HELLO WORLD')
   const adInfo = {
     adUnit: ad,
     adSlot: slotName,
