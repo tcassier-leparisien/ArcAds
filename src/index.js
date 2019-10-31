@@ -155,10 +155,7 @@ export class ArcAds {
 
     const safebreakpoints = (sizemap && sizemap.breakpoints) ? sizemap.breakpoints : [];
 
-    console.log('BEFORE FETCHBIDS');
-    console.log(bidding);
     if (dimensions && bidding && ((bidding.amazon && bidding.amazon.enabled) || (bidding.prebid && bidding.prebid.enabled))) {
-      console.log('AFTER FETCHBIDS');
       fetchBids({
         ad,
         id,
@@ -170,6 +167,8 @@ export class ArcAds {
         breakpoints: safebreakpoints
       });
     } else {
+      console.log('HELOOOOOOOOOOOOOOOOOOOOOOOOOOOOOSsdgrwefsdddddddddddddddddddddddddddddddddddDDDDDyfFFFFFFFFFFFFFFFFft');
+      console.log(bidding);
       refreshSlot({
         ad,
         prerender,
