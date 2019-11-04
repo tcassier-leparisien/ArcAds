@@ -111,6 +111,7 @@ export function fetchBids({
   if (window.arcBiddingReady) {
     Promise.all([prebidBids, amazonBids])
       .then(() => {
+        console.log('BID HAPPENED');
         refreshSlot({
           ad,
           correlator,
