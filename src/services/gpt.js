@@ -84,6 +84,7 @@ export function setTargeting(ad, options) {
 export function dfpSettings(handleSlotRenderEnded) {
   console.log('DISABLE INITIAL LOAD HAPPENED');
   window.googletag.pubads().disableInitialLoad();
+  console.log(window.googletag.pubads().isInitialLoadDisabled());
   window.googletag.pubads().enableSingleRequest();
   window.googletag.pubads().enableAsyncRendering();
   if (this.collapseEmptyDivs) {

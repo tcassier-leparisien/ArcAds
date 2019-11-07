@@ -1,0 +1,14 @@
+
+ifi=7
+ucis=c
+dt=1573142071260&
+prevtoss=14
+correlator=1318683693743604
+rcs=3
+
+ifi=8
+ucis=d
+dt=1573142101252&
+prevtoss=29
+correlator=1441545329248712
+rcs=4
