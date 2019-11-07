@@ -7,7 +7,6 @@ import { prepareSizeMaps, setResizeListener } from './services/sizemapping';
 /** @desc Displays an advertisement from Google DFP with optional support for Prebid.js and Amazon TAM/A9. **/
 export class ArcAds {
   constructor(options, handleSlotRendered = null) {
-    console.log('CONSTRUCTOR LAUNCHED');
     this.dfpId = options.dfp.id || '';
     this.wrapper = options.bidding || {};
     this.positions = [];
@@ -30,8 +29,6 @@ export class ArcAds {
   * @param {object} params - An object containing all of the advertisement configuration settings such as slot name, id, and position.
   **/
   registerAd(params) {
-    console.log('ETAPE 2 : REGISTER AD SUCCESSFULLY INVOKED');
-    console.log(params);
     const { id, slotName, dimensions, adType = false, targeting = {}, display = 'all', bidding = false, iframeBidders = ['openx'] } = params;
     const flatDimensions = [];
     let processDisplayAd = false;
@@ -117,7 +114,6 @@ export class ArcAds {
     bidding = false,
     prerender = null
   }) {
-    console.log('DISPLAY AD');
     const fullSlotName = determineSlotName(this.dfpId, slotName);
     const parsedDimensions = dimensions && !dimensions.length ? null : dimensions;
     const ad = !dimensions ? window.googletag.defineOutOfPageSlot(fullSlotName, id)
@@ -155,9 +151,7 @@ export class ArcAds {
 
     const safebreakpoints = (sizemap && sizemap.breakpoints) ? sizemap.breakpoints : [];
 
-    console.log('BEFORE FETCHBIDS');
     if (dimensions && bidding && ((bidding.amazon && bidding.amazon.enabled) || (bidding.prebid && bidding.prebid.enabled))) {
-      console.log('AFTER FETCHBIDS');
       fetchBids({
         ad,
         id,
